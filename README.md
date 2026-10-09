@@ -2,6 +2,16 @@
 
 A project-based, self-paced course for learning Python from first principles through advanced software engineering. It connects Python fluency to the core ideas practiced in a computer science degree: algorithms, data structures, operating systems, databases, networks, security, and software design.
 
+## Browser playground
+
+The repository also includes a static course website with an editable Python playground. From the repository root, run:
+
+```sh
+python -m http.server 8000
+```
+
+Then open `http://localhost:8000`. The first run downloads Pyodide from its CDN; Python code executes in a browser Web Worker, so it does not run on the website server. Use **Stop** to terminate a long-running program. Interactive `input()` is not supported yet. The site has no build step and can be hosted as a static Vercel project.
+
 ## Who this is for
 
 No programming experience is required. The course is designed for a learner who can spend about 8–12 hours per week. Each unit combines explanation, small drills, a larger build, and a review checkpoint. Read units in order; revisit the reference notes as needed.
