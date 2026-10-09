@@ -10,11 +10,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="playground.css" />
   </head>
   <body>
     <header class="topbar">
       <a class="brand" href="#home" aria-label="Python, step by step home"><span class="brand-mark">Py</span><span>python<span class="brand-light">, step by step</span></span></a>
-      <nav class="topnav" aria-label="Main navigation"><a class="active" href="#course">Course</a><a href="#projects">Projects</a><a href="https://github.com/Nathan200000000/python-from-zero-to-expert" target="_blank" rel="noreferrer">GitHub ↗</a></nav>
+      <nav class="topnav" aria-label="Main navigation"><a class="active" href="#course">Course</a><a href="#playground">Playground</a><a href="#projects">Projects</a><a href="https://github.com/Nathan200000000/python-from-zero-to-expert" target="_blank" rel="noreferrer">GitHub ↗</a></nav>
       <button class="progress-pill" id="progress-pill" type="button"><span class="progress-dot"></span><span id="progress-label">0 / 24 done</span></button>
     </header>
     <main id="home">
@@ -29,6 +30,18 @@
         <div class="hero-art" aria-label="Illustration of a Python code window"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="spark spark-one">✳</div><div class="spark spark-two">✳</div>
           <div class="code-card"><div class="code-top"><div class="window-dots"><b></b><b></b><b></b></div><span>your_first_program.py</span><span class="run-label">● RUNNING</span></div><div class="code-body"><div><span class="line-no">01</span><span class="code-purple">def</span> <span class="code-green">say_hello</span><span class="code-muted">():</span></div><div><span class="line-no">02</span>    <span class="code-purple">return</span> <span class="code-peach">"Hello, you."</span></div><div class="code-gap"></div><div><span class="line-no">03</span><span class="code-green">print</span><span class="code-muted">(</span><span class="code-green">say_hello</span><span class="code-muted">())</span></div><div class="code-output"><span class="line-no">↳</span> Hello, you.</div></div><div class="code-footer"><span><i class="status-dot"></i> Python 3</span><span>It starts here <b>✦</b></span></div></div>
           <div class="floating-note note-one"><span class="note-icon">✓</span><span>Small lessons.<br /><b>Real progress.</b></span></div><div class="floating-note note-two"><span class="note-icon note-purple">{ }</span><span>From beginner<br /><b>to confident.</b></span></div>
+        </div>
+      </section>
+      <section class="playground-section" id="playground" aria-labelledby="playground-title">
+        <div class="playground-heading"><div><span class="section-kicker">YOUR PERSONAL PRACTICE SPACE</span><h2 id="playground-title">Try Python <em>right here.</em></h2><p>Change the code, run it, and see what happens. Python runs in your browser; your code stays on this page.</p></div><span class="runtime-badge"><i class="status-dot"></i><span id="runtime-status">Ready when you are</span></span></div>
+        <div class="playground-card">
+          <div class="playground-toolbar"><div class="editor-label"><span class="editor-file-icon">Py</span><span>playground.py</span><span class="editor-version">PYTHON 3</span></div><div class="playground-actions"><button class="playground-reset" id="reset-code" type="button">Reset</button><button class="playground-stop" id="stop-code" type="button" disabled>Stop</button><button class="playground-run" id="run-code" type="button"><span aria-hidden="true">▶</span> Run code</button></div></div>
+          <div class="playground-workspace"><label class="sr-only" for="code-editor">Python code editor</label><textarea id="code-editor" spellcheck="false" autocapitalize="off" autocomplete="off" autocorrect="off" aria-describedby="editor-hint">def greet(name):
+    return f"Hello, {name}!"
+
+print(greet("Python learner"))
+print("2 to the power of 8 is", 2 ** 8)</textarea><section class="output-panel" aria-label="Program output"><div class="output-heading"><span><i class="output-dot"></i> OUTPUT</span><button id="clear-output" type="button">Clear</button></div><pre id="playground-output" aria-live="polite">Your program's output will appear here.</pre></section></div>
+          <div class="playground-footer"><span id="editor-hint">Tip: press <kbd>Ctrl</kbd> + <kbd>Enter</kbd> to run</span><span>Powered by Python in WebAssembly</span></div>
         </div>
       </section>
       <section class="course-layout" id="roadmap">
