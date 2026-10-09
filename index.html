@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f4f4ef" />
+    <meta name="description" content="A free, project-based Python course from first programs to advanced computer science foundations." />
+    <title>Python, step by step — Learn Python from zero to expert</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="#home" aria-label="Python, step by step home"><span class="brand-mark">Py</span><span>python<span class="brand-light">, step by step</span></span></a>
+      <nav class="topnav" aria-label="Main navigation"><a class="active" href="#course">Course</a><a href="#projects">Projects</a><a href="https://github.com/Nathan200000000/python-from-zero-to-expert" target="_blank" rel="noreferrer">GitHub ↗</a></nav>
+      <button class="progress-pill" id="progress-pill" type="button"><span class="progress-dot"></span><span id="progress-label">0 / 24 done</span></button>
+    </header>
+    <main id="home">
+      <section class="hero" id="course">
+        <div class="hero-copy">
+          <div class="eyebrow"><span class="eyebrow-line"></span> A FREE, PROJECT-BASED COURSE</div>
+          <h1>Learn Python.<br /><span>Build anything.</span></h1>
+          <p class="hero-lede">A clear path from your first line of code to the ideas behind real software. Learn by building, one small win at a time.</p>
+          <div class="hero-actions"><button class="button button-dark" id="start-button" type="button">Start learning <span aria-hidden="true">↘</span></button><a class="text-link" href="#roadmap">Explore the roadmap <span aria-hidden="true">↓</span></a></div>
+          <div class="hero-meta"><span><i class="meta-icon">◷</i> 24 focused units</span><span><i class="meta-icon">⌘</i> Learn at your pace</span><span><i class="meta-icon">↗</i> Build real projects</span></div>
+        </div>
+        <div class="hero-art" aria-label="Illustration of a Python code window"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="spark spark-one">✳</div><div class="spark spark-two">✳</div>
+          <div class="code-card"><div class="code-top"><div class="window-dots"><b></b><b></b><b></b></div><span>your_first_program.py</span><span class="run-label">● RUNNING</span></div><div class="code-body"><div><span class="line-no">01</span><span class="code-purple">def</span> <span class="code-green">say_hello</span><span class="code-muted">():</span></div><div><span class="line-no">02</span>    <span class="code-purple">return</span> <span class="code-peach">"Hello, you."</span></div><div class="code-gap"></div><div><span class="line-no">03</span><span class="code-green">print</span><span class="code-muted">(</span><span class="code-green">say_hello</span><span class="code-muted">())</span></div><div class="code-output"><span class="line-no">↳</span> Hello, you.</div></div><div class="code-footer"><span><i class="status-dot"></i> Python 3</span><span>It starts here <b>✦</b></span></div></div>
+          <div class="floating-note note-one"><span class="note-icon">✓</span><span>Small lessons.<br /><b>Real progress.</b></span></div><div class="floating-note note-two"><span class="note-icon note-purple">{ }</span><span>From beginner<br /><b>to confident.</b></span></div>
+        </div>
+      </section>
+      <section class="course-layout" id="roadmap">
+        <aside class="sidebar" aria-label="Course roadmap"><div class="sidebar-heading"><div><span class="section-kicker">YOUR LEARNING PATH</span><h2>The roadmap</h2></div><span class="unit-count">24 units</span></div><div class="stage-tabs" role="tablist" aria-label="Filter units by level"><button class="stage-tab selected" data-filter="all" role="tab" aria-selected="true">All</button><button class="stage-tab" data-filter="Beginner" role="tab" aria-selected="false">Beginner</button><button class="stage-tab" data-filter="Intermediate" role="tab" aria-selected="false">Intermediate</button><button class="stage-tab" data-filter="Advanced" role="tab" aria-selected="false">Advanced</button></div><div class="unit-list" id="unit-list"></div><div class="sidebar-foot"><span class="foot-check">✓</span><span>Progress saves on this device</span></div></aside>
+        <article class="lesson" id="lesson-panel" aria-live="polite"></article>
+      </section>
+      <section class="projects-band" id="projects"><div><span class="section-kicker">LEARN BY MAKING</span><h2>Skills stick when you <em>build something.</em></h2><p>Every stage ends with a project that puts your new tools to work.</p></div><div class="project-cards"><div class="project-card"><span class="project-number">01 / BEGINNER</span><span class="project-emoji">🎲</span><h3>Guessing game</h3><p>Loops, conditions, and input come together.</p></div><div class="project-card"><span class="project-number">02 / INTERMEDIATE</span><span class="project-emoji">🗂️</span><h3>Contact keeper</h3><p>Design a useful app backed by a database.</p></div><div class="project-card"><span class="project-number">03 / ADVANCED</span><span class="project-emoji">🔎</span><h3>Mini search engine</h3><p>Put data structures and algorithms to work.</p></div></div></section>
+      <footer><a class="brand footer-brand" href="#home"><span class="brand-mark">Py</span><span>python<span class="brand-light">, step by step</span></span></a><span>Made for curious minds. Keep going.</span><a href="https://github.com/Nathan200000000/python-from-zero-to-expert" target="_blank" rel="noreferrer">Open source course ↗</a></footer>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
+
