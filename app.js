@@ -136,3 +136,127 @@ renderList();
 renderLesson();
 updateProgress();
 
+const codeEditor = document.querySelector("#code-editor");
+if (codeEditor) {
+  const output = document.querySelector("#playground-output");
+  const runButton = document.querySelector("#run-code");
+  const stopButton = document.querySelector("#stop-code");
+  const resetButton = document.querySelector("#reset-code");
+  const clearButton = document.querySelector("#clear-output");
+  const runtimeBadge = document.querySelector(".runtime-badge");
+  const runtimeStatus = document.querySelector("#runtime-status");
+  const starterCode = codeEditor.value;
+  let pythonWorker = null;
+  let activeRunId = null;
+  let runSequence = 0;
+
+  function setRuntimeStatus(message, state = "") {
+    runtimeStatus.textContent = message;
+    runtimeBadge.className = `runtime-badge${state ? ` ${state}` : ""}`;
+  }
+
+  function appendOutput(text, isError = false) {
+    if (output.textContent === "Your program's output will appear here.") output.textContent = "";
+    output.textContent += text;
+    output.classList.toggle("has-error", isError || output.classList.contains("has-error"));
+    if (output.textContent.length > 12000) output.textContent = `… output shortened …\n${output.textContent.slice(-11500)}`;
+    output.scrollTop = output.scrollHeight;
+  }
+
+  function finishRun() {
+    activeRunId = null;
+    runButton.disabled = false;
+    stopButton.disabled = true;
+    runButton.innerHTML = '<span aria-hidden="true">▶</span> Run code';
+  }
+
+  function startWorker() {
+    if (pythonWorker) return pythonWorker;
+    if (!("Worker" in window)) throw new Error("This browser does not support Python workers.");
+    pythonWorker = new Worker("python-worker.js", { type: "module" });
+    pythonWorker.addEventListener("message", ({ data }) => {
+      if (data.type === "ready") {
+        setRuntimeStatus(activeRunId === null ? "Python ready" : "Running code…", activeRunId === null ? "" : "running");
+        return;
+      }
+      if (data.type === "fatal") {
+        appendOutput(`Could not start Python: ${data.text}\n`, true);
+        setRuntimeStatus("Could not load Python", "error");
+        pythonWorker?.terminate();
+        pythonWorker = null;
+        finishRun();
+        return;
+      }
+      if (data.id !== activeRunId) return;
+      if (data.type === "output") appendOutput(data.text, data.stream === "stderr");
+      if (data.type === "result") appendOutput(`${data.text}\n`);
+      if (data.type === "error") {
+        appendOutput(`${data.text}\n`, true);
+        setRuntimeStatus("Run finished with an error", "error");
+        finishRun();
+      }
+      if (data.type === "done") {
+        if (output.textContent === "") output.textContent = "Program finished without printing anything.";
+        setRuntimeStatus("Python ready");
+        finishRun();
+      }
+    });
+    pythonWorker.addEventListener("error", event => {
+      event.preventDefault();
+      appendOutput(`Could not start Python: ${event.message || "the worker failed to load."}\n`, true);
+      setRuntimeStatus("Could not load Python", "error");
+      pythonWorker?.terminate();
+      pythonWorker = null;
+      finishRun();
+    });
+    return pythonWorker;
+  }
+
+  runButton.addEventListener("click", () => {
+    if (activeRunId !== null) return;
+    const code = codeEditor.value;
+    const id = ++runSequence;
+    activeRunId = id;
+    output.textContent = "";
+    output.classList.remove("has-error");
+    runButton.disabled = true;
+    stopButton.disabled = false;
+    runButton.textContent = "Running…";
+    setRuntimeStatus(pythonWorker ? "Running code…" : "Starting Python…", "loading");
+    try {
+      startWorker().postMessage({ id, code });
+    } catch (error) {
+      appendOutput(`${error.message}\n`, true);
+      setRuntimeStatus("Could not load Python", "error");
+      finishRun();
+    }
+  });
+
+  stopButton.addEventListener("click", () => {
+    if (activeRunId === null) return;
+    pythonWorker?.terminate();
+    pythonWorker = null;
+    activeRunId = null;
+    appendOutput("\nExecution stopped. The Python worker was reset.\n");
+    setRuntimeStatus("Stopped");
+    finishRun();
+  });
+
+  resetButton.addEventListener("click", () => {
+    codeEditor.value = starterCode;
+    codeEditor.focus();
+  });
+
+  clearButton.addEventListener("click", () => {
+    output.textContent = "";
+    output.classList.remove("has-error");
+  });
+
+  codeEditor.addEventListener("keydown", event => {
+    if (event.key === "Enter" && (event.ctrlKey || event.metaKey)) {
+      event.preventDefault();
+      runButton.click();
+    }
+  });
+}
+
