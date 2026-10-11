@@ -1,6 +1,6 @@
 # Detailed syllabus
 
-Each unit should include a concept guide, worked examples, practice set, a small project, tests, and a reflection prompt. Add solutions only after the learner has attempted the work.
+Each unit in the browser course now presents a focused concept explanation, a runnable Python example, a multiple-choice knowledge check with feedback, and a hands-on practice challenge. Unit completion and quiz progress are saved locally in the learner's browser. For project work beyond the short in-lesson challenge, follow the evidence-of-mastery item in the table and use the capstone rubric below.
 
 | Stage | Unit | Core concepts | Evidence of mastery |
 |---|---|---|---|
