@@ -4,3 +4,6 @@
 
 /* Lesson practice and knowledge checks */
 .quiz-options{display:grid;gap:8px;margin:12px 0}.quiz-option{width:100%;border:1px solid #e3e6de;background:#fbfcf9;border-radius:6px;padding:11px 13px;text-align:left;color:#4e534a;font:500 11px var(--sans);cursor:pointer;transition:background .15s,border-color .15s}.quiz-option:hover:not(:disabled){background:#f0f5ec;border-color:#b7c9ac}.quiz-option:disabled{cursor:default;opacity:.78}.quiz-option.correct{background:#edf7e9;border-color:#a9cb98;color:#426b36}.quiz-option.incorrect{background:#fff1ec;border-color:#e8b5a4;color:#995b47}.quiz-feedback{min-height:22px;font-size:11px!important}.lesson-try{display:inline-block;margin:3px 0 8px;padding:8px 10px;border:1px solid #e2e6dc;border-radius:5px;background:#f7f9f4;color:#5b7450;text-decoration:none;cursor:pointer;font:500 10px var(--sans)}.lesson-try:hover{background:#edf5e9}
+
+/* Local project examples that need tools unavailable in the browser runner */
+.lesson-runtime-note{margin:9px 0 15px;padding:10px 12px;background:#f5f3ed;border-left:3px solid #d0b875;border-radius:0 5px 5px 0;color:#73705f;font-size:10px;line-height:1.6}
