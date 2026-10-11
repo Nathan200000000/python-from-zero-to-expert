@@ -88,7 +88,7 @@ Use a supported Python 3 release, a terminal, a code editor, Git, and a virtual 
 - **Intermediate checkpoint:** build a database-backed service with an intentional API, test suite, and clear complexity notes.
 - **Advanced checkpoint:** design and deliver a capstone with threat considerations, failure handling, performance evidence, and user documentation.
 
-The detailed unit checklist is in [`SYLLABUS.md`](SYLLABUS.md). Start with [`units/00-setup/README.md`](units/00-setup/README.md).
+The detailed curriculum is in [`SYLLABUS.md`](SYLLABUS.md). The browser course includes 24 bite-sized lessons, runnable examples, a quick knowledge check and a practice challenge in every unit. Use **Try this in the playground** to send a lesson example to the Python runner. Unit completion and correct quiz answers are saved in this browser. Start with [`units/00-setup/README.md`](units/00-setup/README.md).
 
 ## Scope and expectations
 
