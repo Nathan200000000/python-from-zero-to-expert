@@ -1,6 +1,6 @@
 # Detailed syllabus
 
-Each unit in the browser course now presents a focused concept explanation, a runnable Python example, a multiple-choice knowledge check with feedback, and a hands-on practice challenge. Unit completion and quiz progress are saved locally in the learner's browser. For project work beyond the short in-lesson challenge, follow the evidence-of-mastery item in the table and use the capstone rubric below.
+The 45-unit browser course presents focused explanations, examples, knowledge checks, and practice challenges. Unit completion and quiz progress save locally in the learner's browser. Some tools require a local Python environment or external service; those examples are identified in the lesson. Use the evidence-of-mastery item for each unit and the capstone rubric below.
 
 | Stage | Unit | Core concepts | Evidence of mastery |
 |---|---|---|---|
@@ -28,6 +28,27 @@ Each unit in the browser course now presents a focused concept explanation, a ru
 | Advanced | 21 Delivery | Packaging, configuration, logging, CI, deployment, releases | Installable, documented application |
 | Advanced | 22 Data science | Numerical precision, arrays, tabular data, plotting, reproducibility | Reproducible analysis with caveats |
 | Advanced | 23 Capstone | Requirements, design, build, verify, review, communicate | Deliver and present a complete project |
+| Beginner | 24 Operators | Arithmetic, comparison, logical, precedence, and bitwise operators | Explain and use arithmetic, boolean, and bitmask expressions |
+| Beginner | 25 Strings and comprehensions | String methods, slicing, formatting, list/set/dict comprehensions | Normalize text and build a filtered lookup structure |
+| Beginner | 26 Errors and file formats | try/except/else/finally, raise, open/with, CSV, JSON | Validate imports, write exports, and report malformed input |
+| Beginner | 27 Loop tools | range, break, continue, direct iteration | Process a sequence and explain loop exit conditions |
+| Intermediate | 28 Functions and scope | *args, **kwargs, local/global/nonlocal, lambdas, closures | Build a configurable callable and explain its captured state |
+| Intermediate | 29 Object-oriented design | __init__, self, inheritance, polymorphism, dunder methods, properties, class/static methods | Model a domain with validated state and interchangeable implementations |
+| Intermediate | 30 Decorators and iteration | Decorators, functools.wraps, iterators, generators, lazy pipelines | Build a reusable decorator and stream records lazily |
+| Intermediate | 31 Type hints and testing | Annotations, unittest, pytest, boundary and failure tests | Deliver a typed module with repeatable tests |
+| Intermediate | 32 Dependencies and environments | pip, venv, pyproject.toml, dependency records | Recreate a project environment from its documented setup |
+| Intermediate | 33 SQLAlchemy | ORM models, sessions, transactions, generated SQL | Build and test a persistent application with rollback behavior |
+| Intermediate | 34 HTTP clients and scraping | requests, BeautifulSoup, Selenium, timeouts, rate limits, responsible access | Parse permitted data with tests, timeouts, and respectful request limits |
+| Intermediate | 35 CLI and logging | argparse, Click, log levels, exit codes, diagnostic context | Build a command-line tool with helpful errors and useful logs |
+| Intermediate | 36 System automation | pathlib, os, shutil, subprocess, dry-run and safe arguments | Automate file work safely and recover from failures |
+| Intermediate | 37 Threads and processes | ThreadPoolExecutor, process pools, shared state, GIL and tradeoffs | Select and benchmark concurrency models for two workload types |
+| Intermediate | 38 Scientific Python | NumPy, pandas, Matplotlib, Seaborn, units and reproducibility | Produce a cleaned, labeled, reproducible data analysis |
+| Intermediate | 39 Git collaboration | Commits, branches, remotes, merges, conflicts, pull requests | Complete a reviewed feature branch with clean history |
+| Intermediate | 40 Regular expressions and XML | re patterns, groups, ElementTree, parsing errors | Extract and validate records from text and XML |
+| Advanced | 41 Machine learning | scikit-learn pipelines, baselines, metrics, leakage, fairness | Evaluate a model on held-out data and explain limits |
+| Advanced | 42 Deep learning | TensorFlow, PyTorch, tensors, gradients, evaluation and compute | Train a small model and compare it with a baseline |
+| Advanced | 43 Web frameworks | Flask, Django, FastAPI, routing, validation, serialization | Build and test a small API and justify framework choice |
+| Advanced | 44 Containers and deployment | Docker images, cloud/PaaS configuration, secrets, health checks, rollback | Containerize and deploy an app with operational notes |
 
 ## CS foundations woven throughout
 

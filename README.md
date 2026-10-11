@@ -68,6 +68,18 @@ By the end, you should be able to:
 
 **Advanced builds:** miniature search engine, task queue, networked service with persistence, and a final capstone selected by the learner.
 
+
+
+## Applied Python skill labs
+
+After the 24-unit core path, 21 focused labs cover the tools and workflows used in practical Python projects. The roadmap groups them by level:
+
+- **Beginner:** operator precedence and bitwise operations; string methods and comprehensions; robust exceptions and file formats; `range`, `break`, and `continue`.
+- **Intermediate:** `*args`/`**kwargs`, scope and closures; object-oriented design; decorators and iteration; type hints with `unittest` and `pytest`; `pip` and `venv`; SQLAlchemy; `requests`, BeautifulSoup, and Selenium; `argparse` and Click; logging and operating-system automation; threads and processes; NumPy, pandas, Matplotlib, and Seaborn; Git collaboration; regular expressions and XML.
+- **Advanced:** scikit-learn; TensorFlow and PyTorch; Flask, Django, and FastAPI; Docker and cloud deployment (including AWS and platform-as-a-service options such as Heroku).
+
+Some tools need an installed local Python environment or an external service. Those lessons provide local setup guidance and practice tasks; their examples are labeled when they cannot run in the browser playground. The syllabus maps each lab to a mastery task.
+
 ## How to study each unit
 
 1. Read the unit guide and type the examples yourself.
@@ -88,7 +100,7 @@ Use a supported Python 3 release, a terminal, a code editor, Git, and a virtual 
 - **Intermediate checkpoint:** build a database-backed service with an intentional API, test suite, and clear complexity notes.
 - **Advanced checkpoint:** design and deliver a capstone with threat considerations, failure handling, performance evidence, and user documentation.
 
-The detailed curriculum is in [`SYLLABUS.md`](SYLLABUS.md). The browser course includes 24 bite-sized lessons, runnable examples, a quick knowledge check and a practice challenge in every unit. Use **Try this in the playground** to send a lesson example to the Python runner. Unit completion and correct quiz answers are saved in this browser. Start with [`units/00-setup/README.md`](units/00-setup/README.md).
+The detailed curriculum is in [`SYLLABUS.md`](SYLLABUS.md). The browser course includes 45 bite-sized lessons, examples, a quick knowledge check and a practice challenge in every unit. Use **Try this in the playground** to send a lesson example to the Python runner. Unit completion and correct quiz answers are saved in this browser. Start with [`units/00-setup/README.md`](units/00-setup/README.md).
 
 ## Scope and expectations
 
